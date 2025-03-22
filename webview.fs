@@ -24,7 +24,7 @@
 \ webview-terminate         ( addr -- n )
 \ webview-dispatch          ( addr func addr -- n )
 \ webview-get-window        ( addr -- addr )
-\ webview-get-native_handle ( addr u -- addr )
+\ webview-get-native-handle ( addr u -- addr )
 \ webview-set-title         ( addr c-addr -- n )
 \ webview-set-size          ( addr u u u -- n )
 \ webview-navigate          ( addr c-addr -- n )
@@ -79,7 +79,7 @@ c-function webview-run webview_run                              a -- n          
 c-function webview-terminate webview_terminate                  a -- n          \ (w) -> e
 c-function webview-dispatch webview_dispatch                    a func a -- n   \ (w, void (*)(w, void*), void*) -> e
 c-function webview-get-window webview_get_window                a -- a          \ (w) -> void*
-c-function webview-get-native_handle webview_get_native_handle  a n -- a        \ (w, webview_native_handle_kind_t) -> void*
+c-function webview-get-native-handle webview_get_native_handle  a n -- a        \ (w, webview_native_handle_kind_t) -> void*
 c-function webview-set-title webview_set_title                  a a -- n        \ (w, const char*) -> e
 c-function webview-set-size webview_set_size                    a n n n -- n    \ (w, int, int, webview_hint_t) -> e
 c-function webview-navigate webview_navigate                    a a -- n        \ (w, const char*) -> e
